@@ -4,6 +4,12 @@
 
 Build a data-rich interface where motion and visualisations help explain information.
 
-Suggested progression: implicit animations; animation controllers; chart fundamentals; CustomPainter; touch/gesture interaction; accessibility and performance; tests and polish.
+## Daily challenges
 
-The daily challenge brief provides the exact task and acceptance criteria for each day.
+- [Day 43](day-43.md)
+- [Day 44](day-44.md)
+- [Day 45](day-45.md)
+- [Day 46](day-46.md)
+- [Day 47](day-47.md)
+- [Day 48](day-48.md)
+- [Day 49](day-49.md)
