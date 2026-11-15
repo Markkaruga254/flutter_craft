@@ -15,35 +15,40 @@ flutter --version
 dart --version
 flutter doctor -v
 git --version
+flutter devices
 ```
 
-- Confirm Flutter and Dart are available.
-- Read the output of `flutter doctor -v`; identify any issue that would prevent Android development.
-- Confirm that an Android device or emulator is visible with `flutter devices`.
-- If something is broken, record the exact error and investigate it before moving on. Do not hide warnings by blindly installing packages.
+Confirm Flutter and Dart are available, read the Android section of `flutter doctor -v`, and make sure an Android device or emulator is detected. If something is broken, record the exact error and investigate it before moving on.
 
 ## Part B — Create the app
 
-1. From the repository root, create a Flutter application in `apps/01-pocket-finance`. If the directory currently contains only this README, create the project in a temporary sibling directory and move the generated project files into this directory without losing this README.
-2. Give the app a clear name such as `pocket_finance`.
-3. Run it on your Android device or emulator.
+The app directory already contains this README, so **do not run `flutter create .` here**; that could overwrite project documentation.
+
+1. From `apps/01-pocket-finance`, generate the Flutter starter project in a temporary sibling directory.
+2. Move the generated project files into `apps/01-pocket-finance`, keeping this README.
+3. Run the app on your Android device or emulator.
 4. Inspect `lib/main.dart` and identify the entry point, `runApp()`, the root widget and the first screen widget.
 5. Make one small, deliberate change to the starter screen and hot reload.
 
-Useful commands:
+For example, from the app directory:
 
 ```bash
-flutter create --project-name pocket_finance .
+flutter create --project-name pocket_finance ../pocket_finance_scaffold
+```
+
+Then move the generated files from `../pocket_finance_scaffold/` into the current directory, **excluding its README.md** so this project brief stays intact. Remove the temporary scaffold directory after checking the files were moved correctly.
+
+Finally:
+
+```bash
 flutter pub get
 flutter devices
 flutter run
 ```
 
-Run `flutter create` from inside `apps/01-pocket-finance` only after checking that the directory is ready. If Flutter refuses to generate into a non-empty directory, use a temporary directory and move the generated files carefully.
-
 ## Part C — Dart warm-up
 
-Create a separate file named `tool/day_01_warmup.dart` (create the `tool/` directory if needed). Write a small Dart program that:
+Create `tool/day_01_warmup.dart` (create the `tool/` directory if needed). Write a small Dart program that:
 
 - declares a user's display name as a `String`;
 - stores a fictional account balance as a `double`;
@@ -57,7 +62,7 @@ Use fictional values only. Run it with:
 dart run tool/day_01_warmup.dart
 ```
 
-Do not copy a complete solution. Use the Dart language tour if you need a reference.
+Do not copy a complete solution. Use the [Dart language tour](https://dart.dev/language) if you need a reference.
 
 ## Acceptance criteria
 
