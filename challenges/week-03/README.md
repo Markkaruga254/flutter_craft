@@ -4,6 +4,12 @@
 
 Build a habit tracker that supports creating, editing, completing and reviewing habits. Learn where state should live, how to validate user input and how to persist simple data locally.
 
-Suggested progression: stateful widgets; lifting state; form fields and validation; habit model; completion interactions; local persistence; tests and review.
+## Daily challenges
 
-The daily challenge brief provides the exact task and acceptance criteria for each day.
+- [Day 15](day-15.md)
+- [Day 16](day-16.md)
+- [Day 17](day-17.md)
+- [Day 18](day-18.md)
+- [Day 19](day-19.md)
+- [Day 20](day-20.md)
+- [Day 21](day-21.md)
