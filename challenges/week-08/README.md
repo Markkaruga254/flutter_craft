@@ -2,8 +2,14 @@
 
 **Theme:** original product development from problem definition to demo.
 
-Choose a focused problem, define the user journey, create a design direction and build a coherent app using the skills from the previous weeks.
+Choose a focused problem, define the user journey, create a design direction and build a coherent app using the skills from the previous weeks. Prefer a small, complete product over a large unfinished one.
 
-Suggested progression: product brief and scope; user flow and design; architecture; core feature; data and persistence/API; tests and refinement; final demo and retrospective.
+## Daily challenges
 
-The exact capstone scope should be agreed before implementation. Prefer a small, complete product over a large unfinished one.
+- [Day 50](day-50.md)
+- [Day 51](day-51.md)
+- [Day 52](day-52.md)
+- [Day 53](day-53.md)
+- [Day 54](day-54.md)
+- [Day 55](day-55.md)
+- [Day 56](day-56.md)
