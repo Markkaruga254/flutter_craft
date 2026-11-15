@@ -4,6 +4,12 @@
 
 Build a travel discovery experience with strong visual hierarchy, destination content and meaningful transitions.
 
-Suggested progression: layout composition; typography and imagery; scroll effects; detail pages; Hero transitions; map/location UI patterns with mock data; polish and accessibility.
+## Daily challenges
 
-The daily challenge brief provides the exact task and acceptance criteria for each day.
+- [Day 22](day-22.md)
+- [Day 23](day-23.md)
+- [Day 24](day-24.md)
+- [Day 25](day-25.md)
+- [Day 26](day-26.md)
+- [Day 27](day-27.md)
+- [Day 28](day-28.md)
