@@ -2,8 +2,14 @@
 
 **Theme:** catalogue architecture, cart state and reusable design systems.
 
-Build a mock shopping experience with product discovery, variants and a local cart. Focus on state transitions and derived values such as item counts and totals.
+Build a mock shopping experience with product discovery, variants and a local cart. Focus on state transitions and derived values such as item counts and totals. No real payments.
 
-Suggested progression: product models; catalogue; product detail; variants; cart state; reusable components; tests and review. No real payments.
+## Daily challenges
 
-The daily challenge brief provides the exact task and acceptance criteria for each day.
+- [Day 29](day-29.md)
+- [Day 30](day-30.md)
+- [Day 31](day-31.md)
+- [Day 32](day-32.md)
+- [Day 33](day-33.md)
+- [Day 34](day-34.md)
+- [Day 35](day-35.md)
