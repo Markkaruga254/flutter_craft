@@ -1,0 +1,49 @@
+name: Flutter CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  analyze-and-test:
+    name: Analyze and test changed Flutter apps
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Find Flutter apps
+        id: apps
+        shell: bash
+        run: |
+          apps=""
+          while IFS= read -r file; do
+            dir="$(dirname "$file")"
+            if [[ -f "$dir/pubspec.yaml" ]]; then
+              apps="$apps $dir"
+            fi
+          done < <(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" 2>/dev/null || true)
+          if [[ -z "$apps" ]]; then
+            apps="$(find apps -mindepth 2 -maxdepth 2 -name pubspec.yaml -printf '%h\n' | tr '\n' ' ')"
+          fi
+          echo "directories=$apps" >> "$GITHUB_OUTPUT"
+      - name: Analyze and test
+        if: steps.apps.outputs.directories != ''
+        shell: bash
+        run: |
+          for app in ${{ steps.apps.outputs.directories }}; do
+            echo "::group::$app"
+            cd "$GITHUB_WORKSPACE/$app"
+            flutter pub get
+            dart format --output=none --set-exit-if-changed .
+            flutter analyze
+            flutter test
+            cd "$GITHUB_WORKSPACE"
+            echo "::endgroup::"
+          done
