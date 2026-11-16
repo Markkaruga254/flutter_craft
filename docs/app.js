@@ -24,7 +24,7 @@ function renderProjects(){
 }
 function setupFilters(){
  const week=document.querySelector("#week-filter");
- week.innerHTML+ = "";
+ week.innerHTML += "";
  PROGRAM.forEach(w=>{const option=document.createElement("option");option.value=String(w.week);option.textContent=`Week 0${w.week} · ${w.name}`;week.append(option)});
  ["#challenge-search","#week-filter","#status-filter"].forEach(sel=>document.querySelector(sel).addEventListener(sel==="#challenge-search"?"input":"change",renderChallenges));
 }
