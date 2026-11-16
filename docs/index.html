@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101410">
+  <meta name="description" content="An interactive 8-week Flutter and Dart learning journey. Explore projects, daily coding challenges and track your progress.">
+  <title>Flutter Craft — Build. Learn. Ship.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Flutter Craft home"><span class="brand-mark">F<span>.</span></span><span>FLUTTER CRAFT</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+      <a href="#journey">Journey</a><a href="#projects">Projects</a><a href="#challenges">Challenges</a><a href="#progress">Progress</a>
+      <a class="nav-github" href="https://github.com/Markkaruga254/flutter_craft" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+  <main id="home">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> THE 56-DAY BUILDING JOURNEY</div>
+        <h1>Build beautifully.<br><span>Understand deeply.</span><br>Ship confidently.</h1>
+        <p class="hero-lede">A hands-on path from Dart fundamentals to polished Flutter apps. Eight projects. Real daily challenges. One stronger developer at a time.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#journey">Explore the journey <span>↘</span></a><a class="button button-quiet" href="https://github.com/Markkaruga254/flutter_craft" target="_blank" rel="noreferrer">View repository ↗</a></div>
+        <div class="hero-meta"><span><strong>08</strong> weeks</span><i></i><span><strong>56</strong> challenges</span><i></i><span><strong>08</strong> projects</span></div>
+      </div>
+      <div class="hero-art" aria-label="Flutter Craft learning progress illustration">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="art-core"><span class="core-symbol">✳</span><span class="core-label">FLUTTER<br>CRAFT</span></div>
+        <div class="float-card card-top"><span class="mini-icon">⌘</span><span><small>LANGUAGE</small><b>Dart</b></span></div>
+        <div class="float-card card-right"><span class="mini-icon green">▱</span><span><small>FRAMEWORK</small><b>Flutter</b></span></div>
+        <div class="float-card card-bottom"><span class="mini-icon orange">↗</span><span><small>YOUR NEXT STEP</small><b>Build something real</b></span></div>
+        <div class="art-star star-a">✳</div><div class="art-star star-b">✦</div>
+      </div>
+    </section>
+    <section class="stats shell" aria-label="Programme overview">
+      <div><span class="stat-number">08</span><span class="stat-label">WEEKLY BUILDS</span></div><div><span class="stat-number">56</span><span class="stat-label">DAILY BRIEFS</span></div><div><span class="stat-number">∞</span><span class="stat-label">THINGS TO LEARN</span></div><div class="stats-progress"><div class="stat-progress-head"><span>YOUR PROGRESS</span><b id="hero-progress-label">0 / 56</b></div><div class="progress-track"><span id="hero-progress-bar"></span></div></div>
+    </section>
+    <section class="section shell" id="journey">
+      <div class="section-heading"><div><div class="eyebrow">01 / THE ROADMAP</div><h2>One journey. <span>Eight builds.</span></h2></div><p>Each week introduces a new set of ideas, then puts them to work in a focused app.</p></div>
+      <div class="journey-grid" id="journey-grid"></div>
+    </section>
+    <section class="section shell" id="projects">
+      <div class="section-heading"><div><div class="eyebrow">02 / THE BUILDS</div><h2>Learn by <span>making.</span></h2></div><a class="text-link" href="https://github.com/Markkaruga254/flutter_craft/tree/main/apps" target="_blank" rel="noreferrer">Browse all app folders ↗</a></div>
+      <div class="project-grid" id="project-grid"></div>
+    </section>
+    <section class="section shell" id="challenges">
+      <div class="section-heading"><div><div class="eyebrow">03 / DAILY PRACTICE</div><h2>Show up. <span>Ship daily.</span></h2></div><p>Find a challenge, open its brief in the repository, and mark it complete when you have verified your work.</p></div>
+      <div class="challenge-toolbar"><label class="search-box"><span>⌕</span><input id="challenge-search" type="search" placeholder="Search challenges or days…" aria-label="Search challenges"></label><select id="week-filter" aria-label="Filter by week"><option value="all">All weeks</option></select><select id="status-filter" aria-label="Filter by completion"><option value="all">All progress</option><option value="done">Completed</option><option value="todo">Not completed</option></select></div>
+      <div class="challenge-summary"><span id="challenge-count">56 challenges</span><span id="challenge-completed">0 completed</span></div>
+      <div class="challenge-list" id="challenge-list"></div>
+    </section>
+    <section class="section shell progress-section" id="progress">
+      <div class="progress-panel">
+        <div class="progress-copy"><div class="eyebrow">04 / YOUR WORKSPACE</div><h2>Progress is built <span>one day at a time.</span></h2><p>Your completion marks are saved in this browser. They stay on this device and are not sent to GitHub.</p><button class="button button-quiet reset-button" id="reset-progress">Reset progress</button></div>
+        <div class="progress-ring-wrap"><div class="progress-ring" id="progress-ring"><div><strong id="progress-percent">0%</strong><small>COMPLETE</small></div></div><div class="ring-caption"><b id="progress-total">0 of 56</b><span>daily challenges completed</span></div></div>
+      </div>
+      <div class="progress-foot"><span>Keep your learning visible.</span><a href="https://github.com/Markkaruga254/flutter_craft/blob/main/LEARNING_LOG.md" target="_blank" rel="noreferrer">Open your learning log ↗</a></div>
+    </section>
+    <section class="closing shell"><div class="closing-mark">✳</div><div><div class="eyebrow">THE NEXT COMMIT STARTS HERE</div><h2>Less scrolling.<br><span>More building.</span></h2></div><a class="button button-primary" href="https://github.com/Markkaruga254/flutter_craft" target="_blank" rel="noreferrer">Start building ↗</a></section>
+  </main>
+  <footer class="footer shell"><a class="brand" href="#home"><span class="brand-mark">F<span>.</span></span><span>FLUTTER CRAFT</span></a><span>Built for curious minds and consistent builders.</span><a href="https://github.com/Markkaruga254/flutter_craft" target="_blank" rel="noreferrer">Open source on GitHub ↗</a></footer>
+</body>
+</html>
